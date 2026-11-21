@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+  --ink: #152c4c;
+  --body: #3b4e64;
+  --muted: #57697c;
+  --line: #dbe2e9;
+  --wash: #f3f6fa;
+  --paper: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+a { color: inherit; text-underline-offset: 5px; }
+a:focus-visible { outline: 3px solid #416caa; outline-offset: 5px; }
+p, h1, h2, h3 { margin: 0; }
+.page { max-width: 1120px; margin: auto; padding: 0 48px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; text-decoration: none; }
+.brand-mark { font-family: Georgia, serif; font-size: 28px; line-height: 1; }
+nav { display: flex; gap: 30px; font-size: 14px; }
+nav a { padding: 6px 0; text-decoration: none; }
+nav a:hover, footer a:hover { text-decoration: underline; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 70px; align-items: center; padding: 74px 0 76px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 11px; font-weight: 600; color: var(--muted); }
+h1 { margin: 14px 0 26px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 6.5vw, 76px); font-weight: 400; line-height: 1.08; letter-spacing: -.04em; }
+h1 span { display: block; }
+.intro-copy { max-width: 540px; color: var(--body); font-size: 17px; line-height: 1.8; }
+.project-link { display: inline-flex; align-items: center; gap: 24px; margin-top: 30px; padding: 11px 18px; border: 1px solid var(--ink); text-decoration: none; font-size: 13px; font-weight: 600; }
+.project-link:hover { color: var(--paper); background: var(--ink); }
+.course-note { border-left: 2px solid var(--ink); padding: 4px 0 4px 25px; font-size: 14px; color: var(--body); }
+.note-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .13em; }
+.course-code { margin: 7px 0 7px; font-size: 22px; font-weight: 600; color: var(--ink); }
+.note-rule { display: block; width: 30px; height: 1px; background: var(--line); margin: 21px 0 15px; }
+.course-topics { font-size: 12px; color: var(--muted); line-height: 1.9; }
+.projects { padding: 34px 0 20px; border-top: 2px solid var(--ink); }
+.section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
+h2 { margin-top: 7px; font-family: Georgia, "Times New Roman", serif; font-size: 31px; font-weight: 400; line-height: 1.25; letter-spacing: -.02em; }
+.section-heading > p { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.project { display: grid; grid-template-columns: 40px minmax(0, 1fr) 160px; gap: 20px; padding: 24px 0; border-top: 1px solid var(--line); }
+.project-number { color: var(--muted); font-family: Georgia, serif; font-size: 18px; padding-top: 20px; }
+.project-label { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 4px; }
+h3 { font-size: 18px; font-weight: 600; letter-spacing: -.02em; line-height: 1.4; }
+.project-body > p:last-child { margin-top: 7px; color: var(--body); max-width: 610px; font-size: 13px; line-height: 1.75; }
+.project-field { color: var(--muted); font-size: 11px; text-align: right; padding-top: 23px; }
+footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); margin-top: 28px; padding: 25px 0 30px; font-size: 11px; color: var(--muted); }
+footer a { text-decoration: none; padding: 6px 0; }
+.skip-link { position: absolute; left: 10px; top: -100px; padding: 8px 14px; background: var(--ink); color: var(--paper); z-index: 1; }
+.skip-link:focus { top: 8px; }
+@media (max-width: 760px) {
+  .page { padding: 0 26px; }
+  .intro { grid-template-columns: minmax(0, 1fr); gap: 35px; padding: 50px 0; }
+  .course-note { padding-left: 20px; }
+  .section-heading { display: block; }
+  .section-heading > p { margin-top: 14px; }
+  .project { grid-template-columns: 28px minmax(0, 1fr); gap: 14px; }
+  .project-field { grid-column: 2; text-align: left; padding-top: 0; margin-top: -7px; }
+}
+@media (max-width: 400px) {
+  .page { padding: 0 20px; }
+  .site-header { flex-wrap: wrap; gap: 12px; padding: 20px 0; }
+  nav { gap: 24px; }
+  h2 { font-size: 27px; }
+  footer { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
